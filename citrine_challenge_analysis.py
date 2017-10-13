@@ -375,3 +375,5 @@ for i in range(5):
     f_score=2*precision*recall/(precision+recall)
     f_score_values.append(f_score)
 print(f_score_values)
+
+
