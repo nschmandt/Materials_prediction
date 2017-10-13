@@ -62,7 +62,8 @@ for n in range(0,9):
 #this command tells me that only the noble gases never react with anything
 temp=training['formulaA'][training['stabilityVec_total']==0].value_counts()
 for x in temp.index:
-    print('Sum for element %s is ' % (x) + str(np.sum(training['stabilityVec_total'][training['formulaA']==x])))
+    if x in ['Ar', 'Ne', 'He', 'Kr', 'Xe']:
+        print('Sum for element %s is ' % (x) + str(np.sum(training['stabilityVec_total'][training['formulaA']==x])))
 
 
 #add columns that may be of use for the classifier, ratios and differences of different values
